@@ -261,6 +261,9 @@ void loop() {
 
   int wifi_status = update_wifi_status();
 
+  // do any other periodic updates for uplinks
+  poll_transmission();
+
   display(current_ms, gm_counts, gm_count_timestamp, hv_pulses);
 
   if (Serial_Print_Mode == Serial_One_Minute_Log)
